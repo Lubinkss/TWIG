@@ -12,7 +12,7 @@ class Maison extends AbstractController
 
 {   #[Route('/maison/{qui}')]
     public function maison(string $qui = 'Mickey'): Response {
-        return new Response("Meuble de " . $qui);
+        return $this->render('hello.html.twig');
     }
 
 

@@ -79,3 +79,5 @@ Encore
 ;
 
 export default await Encore.getWebpackConfig();
+
+Encore  .enablePostCssLoader();
