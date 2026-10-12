@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Category;
 use App\Entity\Park;
 use App\Entity\Coaster;
 use Symfony\Component\Form\AbstractType;
@@ -20,6 +21,13 @@ class CoasterType extends AbstractType
             ->add('maxHeight')
             ->add('operating')
             ->add('park', EntityType::class, ['class' => Park::class,])
+            ->add('categories', EntityType::class, [
+            'class' => Category::class,
+            'choice_label' => 'name',
+            'multiple' => true,
+            'expanded' => true,
+            ])
+        
 
         ;
     }
