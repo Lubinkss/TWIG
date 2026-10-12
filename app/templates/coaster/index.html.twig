@@ -16,6 +16,7 @@
                     <th>Opérationel</th>
                     <th>Edit</th>
                     <th>Suppression</th>
+                    <th>Park</th>
                 </tr>
             </thead>
 
@@ -29,6 +30,8 @@
                 <td>{{coaster.operating}}</td>
                 <td><a class="btn btn-neutral" href="{{ path('app_coaster_edit', { id: coaster.id }) }}"> Modifier </a></td>
                 <td><a class="btn btn-neutral" href="{{ path('app_coaster_delete', { id: coaster.id }) }}"> Supprimer </a></td>
+                <td>{{coaster.getPark()}}</td>
+
 
             </tr>
             </tbody>
