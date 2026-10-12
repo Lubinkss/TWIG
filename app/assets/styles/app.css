@@ -1,4 +1,5 @@
 @import "tailwindcss";
 @source "./../../vendor/symfony/twig-bridge/Resources/views/Form/daisyui_5_layout.html.twig";
 @plugin "daisyui";
+@import "bootstrap-icons/font/bootstrap-icons";
 

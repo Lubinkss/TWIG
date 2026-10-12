@@ -19,17 +19,14 @@
         <script src="https://cdn.jsdelivr.net/npm/frankenphp-hot-reload/+esm" type="module"></script>
         {% endif %}
     </head>
-    <body>
-    <main class="flex flex-nowrap h-[100vh]">
-        <div class="flex flex-col shrink-0 shadow w-[240px] bg-base-200">
-            <div class="py-2 bg-primary text-center text-white">Wiki Coaster</div>
-        </div>
-        <div class="p-4 flex-grow-1">
-            <div class="bg-base-200 p-2 rounded-xs border-base-300">
-                {% block body %}{% endblock %}
-            </div>     
-        </div>
-    </main>    
-    </body>
+    <body> <main class="flex flex-nowrap h-[100vh]"> <div class="flex flex-col shrink-0 shadow w-[240px] bg-base-200"> <div class="py-4 bg-primary text-center text-white font-bold"> Wiki Coaster </div>
+
+<ul class="menu w-full p-4 gap-2"> <li> <a href="{{ path('app_coaster_index') }}"> Coasters </a> </li>
+
+<li> <a href="{{ path('app_coaster_add') }}"> Ajouter un coaster </a> </li>
+
+<li> <a href="{{ path('app_category_index') }}"> Categories </a> </li>
+
+<div class="p-4 flex-grow min-w-0 overflow-auto"> <div class="bg-base-200 p-4 rounded-box border border-base-300"> {% block body %}{% endblock %} </div> </div> </main> </body>
 
 </html>
