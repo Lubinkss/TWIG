@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Coaster;
 use App\Repository\CoasterRepository;
 use App\Form\CoasterType;
+use App\Service\DescriptionGeneratorService;
 use Doctrine\ORM\EntityManagerInterface;
 
 
@@ -83,7 +84,14 @@ public function delete( Coaster $coaster, Request $request, EntityManagerInterfa
     ]);
 }
 
+#[route('/coaster/{id}/generate-description', name: 'app_coaster_generate')]
+public function generateDescription(Coaster $coaster, EntityManagerInterface $em, DescriptionGeneratorService $dgs): Response
+{
+    $dgs->generateForCoaster($coaster);
+    $em->flush();
 
+    return $this->redirectToRoute('app_coaster_index')
 
+}
 
 }
