@@ -33,7 +33,7 @@
                 <td><a class="btn btn-neutral" href="{{ path('app_coaster_delete', { id: coaster.id }) }}"> Supprimer </a></td>
                 <td>{{coaster.park}}</td>
                 {%for category in coaster.categories %}
-                    <li>{{category}}</li>
+                    <td>{{category}}</td>
                 {%endfor%}
 
             </tr>
