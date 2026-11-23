@@ -90,7 +90,7 @@ public function generateDescription(Coaster $coaster, EntityManagerInterface $em
     $dgs->generateForCoaster($coaster);
     $em->flush();
 
-    return $this->redirectToRoute('app_coaster_index')
+    return $this->redirectToRoute('app_coaster_index');
 
 }
 
